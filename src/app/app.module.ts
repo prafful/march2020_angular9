@@ -11,6 +11,13 @@ import { FatherComponent } from './myfamily/father/father.component';
 import { MotherComponent } from './myfamily/mother/mother.component';
 import { ChildComponent } from './myfamily/child/child.component';
 import { TestComponent } from './test/test.component';
+import { HomeComponent } from './spa/home/home.component';
+import { ContactComponent } from './spa/contact/contact.component';
+import { TeamComponent } from './spa/team/team.component';
+import { LeadershipComponent } from './spa/team-child-routes/leadership/leadership.component';
+import { MarketingComponent } from './spa/team-child-routes/marketing/marketing.component';
+import { ResearchComponent } from './spa/team-child-routes/research/research.component';
+import { TrainingComponent } from './spa/team-child-routes/training/training.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +29,14 @@ import { TestComponent } from './test/test.component';
     FatherComponent,
     MotherComponent,
     ChildComponent,
-    TestComponent
+    TestComponent,
+    HomeComponent,
+    ContactComponent,
+    TeamComponent,
+    LeadershipComponent,
+    MarketingComponent,
+    ResearchComponent,
+    TrainingComponent
   ],
   imports: [
     BrowserModule,
