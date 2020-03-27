@@ -1,1 +1,20 @@
-<p>structurengif works!</p>
+<p>*ngIf directive demo (plain):</p>
+<p>Display: {{display}}</p>
+<div>
+    <button (click)="toggle()">Hide And Seek</button>
+    <div class="ddd" *ngIf='display'>
+        <img src="assets/images/logo.jpg" >
+    </div>
+</div>
+
+<p>*ngIf directive with else criteria:</p>
+<div>
+    
+    <div class="ddd" *ngIf='display; else displaylogo'>
+        <img src="assets/images/insta.png" width="40%">
+    </div>
+    <<ng-template #displaylogo>
+        <img src="assets/images/logo.jpg" >
+    </ng-template>
+    
+</div>
