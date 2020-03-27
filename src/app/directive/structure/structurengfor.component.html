@@ -1,0 +1,44 @@
+
+
+<p>Without directive:</p>
+<ol>
+    <li>{{services[0]}}</li>
+    <li>{{services[1]}}</li>
+    <li>{{services[2]}}</li>
+    <li>{{services[3]}}</li>
+</ol>
+<p>With *ngFor directive on array of strings:</p>
+<ol>
+    <li *ngFor="let service of services">
+        {{service}}
+    </li>
+</ol>
+
+<p>With *ngFor directive on array of objects:</p>
+<ol>
+    <li *ngFor="let f of friends ">
+        {{f.name}} from {{f.location}} with score of {{f.score}}
+    </li>
+</ol>
+
+<p>With *ngFor directive on array of objects (display in tabluar format!):</p>
+<table border="1">
+    <thead>
+        <tr>
+            <th>S.no</th>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th>Score</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let f of friends; let counter = index ">
+            <td>{{ counter + 1 }}</td>
+            <td>{{ f.id }}</td>
+            <td>{{f.name}}</td>
+            <td>{{f.location}}</td>
+            <td>{{f.score}}</td>
+        </tr>
+    </tbody>
+</table>

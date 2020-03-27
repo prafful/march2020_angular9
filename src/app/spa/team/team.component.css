@@ -1,0 +1,16 @@
+.menu{
+
+    position: absolute;
+    width: 10%;
+    border:1px solid red;
+}
+
+.content{
+    margin-left:180px;
+    height: 200px;
+    border: 1px solid green;
+}
+
+.item{
+    list-style: none;
+}

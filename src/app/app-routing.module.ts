@@ -10,6 +10,11 @@ import { LeadershipComponent } from "./spa/team-child-routes/leadership/leadersh
 import { MarketingComponent } from './spa/team-child-routes/marketing/marketing.component';
 import { ResearchComponent } from './spa/team-child-routes/research/research.component';
 import { TrainingComponent } from "./spa/team-child-routes/training/training.component";
+import { DonotexistComponent } from './spa/donotexist/donotexist.component';
+import {  StructureComponentNgFor } from './directive/structure/structurengfor.component';
+import { SampledirectiveComponent } from './directive/sampledirective/sampledirective.component';
+import { StructurengifComponent } from './directive/structurengif/structurengif.component';
+import { StructurengswitchcaseComponent } from './directive/structurengswitchcase/structurengswitchcase.component';
 
 
 const routes: Routes = [
@@ -64,6 +69,29 @@ const routes: Routes = [
                 {
                   path:'family',
                   component:FamilyComponent
+                },
+                {
+                  path:'directive',
+                  component:SampledirectiveComponent,
+                  children:[
+                    {
+                      path:'ngfor',
+                      component:StructureComponentNgFor
+                    },
+                    {
+                      path:'ngif',
+                      component:StructurengifComponent
+                    },
+                    {
+                      path:'ngswitchcase',
+                      component:StructurengswitchcaseComponent
+                    }
+                  ]
+                },
+                {
+                  path:'**',
+                  component:DonotexistComponent
+
                 }
 
 
