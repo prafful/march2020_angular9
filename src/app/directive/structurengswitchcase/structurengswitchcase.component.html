@@ -1,1 +1,35 @@
-<p>structurengswitchcase works!</p>
+<p>ngSwitchCase demo:</p>
+
+Friend: {{friend}}
+<br>
+<br>
+
+<div [ngSwitch]='friend'>
+    <span *ngSwitchCase="'obb'">
+        <div>Friend: {{friend}} , Online Business Builder</div>
+        <div>
+            <img src="assets/images/{{friend}}.png"  width="200">
+        </div>
+    </span>
+    <span *ngSwitchCase="'owioh'">
+        <div>Friend: {{friend}} , Our World In Our Hands</div>
+        <div>
+            <img src="assets/images/{{friend}}.png"  width="200">
+        </div>
+    </span>
+    <span *ngSwitchCase="'cas'">
+        <div>Friend: {{friend}} , Cloud App Store</div>
+        <div>
+            <img src="assets/images/{{friend}}.png"  width="200">
+        </div>
+    </span>
+    <span *ngSwitchCase="'mlann'">
+        <div>Friend: {{friend}} , Machine Learning And Artificial Neural Network</div>
+        <div>
+            <img src="assets/images/{{friend}}.png"  width="200">
+        </div>
+    </span>
+
+
+
+</div>

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StructurengswitchcaseComponent implements OnInit {
 
+  friend:string = 'mlann'
+
   constructor() { }
 
   ngOnInit(): void {

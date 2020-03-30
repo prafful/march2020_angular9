@@ -15,6 +15,9 @@ import {  StructureComponentNgFor } from './directive/structure/structurengfor.c
 import { SampledirectiveComponent } from './directive/sampledirective/sampledirective.component';
 import { StructurengifComponent } from './directive/structurengif/structurengif.component';
 import { StructurengswitchcaseComponent } from './directive/structurengswitchcase/structurengswitchcase.component';
+import { AllpipesComponent } from './pipes/allpipes/allpipes.component';
+import { InbuiltpipesComponent } from "./pipes/inbuiltpipes/inbuiltpipes.component";
+import { CustompipesComponent } from './pipes/custompipes/custompipes.component';
 
 
 const routes: Routes = [
@@ -85,6 +88,20 @@ const routes: Routes = [
                     {
                       path:'ngswitchcase',
                       component:StructurengswitchcaseComponent
+                    }
+                  ]
+                },
+                {
+                  path:'pipes',
+                  component:AllpipesComponent,
+                  children:[
+                    {
+                      path:'inbuiltpipe',
+                      component:InbuiltpipesComponent
+                    },
+                    {
+                      path:'custompipe',
+                      component:CustompipesComponent
                     }
                   ]
                 },

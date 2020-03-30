@@ -23,6 +23,10 @@ import { StructureComponentNgFor } from './directive/structure/structurengfor.co
 import { SampledirectiveComponent } from './directive/sampledirective/sampledirective.component';
 import { StructurengifComponent } from './directive/structurengif/structurengif.component';
 import { StructurengswitchcaseComponent } from './directive/structurengswitchcase/structurengswitchcase.component';
+import { AllpipesComponent } from './pipes/allpipes/allpipes.component';
+import { InbuiltpipesComponent } from './pipes/inbuiltpipes/inbuiltpipes.component';
+import { CustompipesComponent } from './pipes/custompipes/custompipes.component';
+import { SortnumberspipePipe } from './custompipe/sortnumberspipe.pipe';
 
 
 @NgModule({
@@ -47,7 +51,11 @@ import { StructurengswitchcaseComponent } from './directive/structurengswitchcas
     StructureComponentNgFor,
     SampledirectiveComponent,
     StructurengifComponent,
-    StructurengswitchcaseComponent   
+    StructurengswitchcaseComponent,
+    AllpipesComponent,
+    InbuiltpipesComponent,
+    CustompipesComponent,
+    SortnumberspipePipe   
   ],
   imports: [
     BrowserModule,

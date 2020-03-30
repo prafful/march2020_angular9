@@ -8,12 +8,14 @@
 </div>
 
 <p>*ngIf directive with else criteria:</p>
+<br>
+<button (click)="toggleElse()">ngIf Else</button>
 <div>
     
-    <div class="ddd" *ngIf='display; else displaylogo'>
+    <div class="ddd" *ngIf='elsecheck; else displaylogo'>
         <img src="assets/images/insta.png" width="40%">
     </div>
-    <<ng-template #displaylogo>
+    <ng-template #displaylogo>
         <img src="assets/images/logo.jpg" >
     </ng-template>
     

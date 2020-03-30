@@ -1,0 +1,36 @@
+<h3>inbuiltpipes works!</h3>
+
+<p>Date pipe:</p>
+Date: {{mydate }}
+<br>
+Default date pipe applied: {{ mydate | date | lowercase}}
+<br>
+Long Date format: {{ mydate | date:'longDate'}}
+<br>
+Short Date format: {{ mydate | date:'shortDate'}}
+<br>
+Short Time format: {{ mydate | date:'shortTime'}}
+<br>
+Weekday format: {{ mydate | date:'EEEE'| uppercase }}
+<br><br>
+<p>Uppercase and Lowercase pipe:</p>
+Friend: {{friend }}
+<br>
+Friend: {{friend | uppercase}}
+<br>
+Friend: {{friend | lowercase}}
+<br>
+Friend: {{friend | titlecase}}
+<br>
+<br>
+<p>Currency pipe:</p>
+Salary: {{salary}}
+<br>
+Salary: {{salary | currency}}
+<br>
+Salary: {{salary | currency : 'INR'}}
+<br>
+Salary: {{salary | currency: 'JPY'}}
+<br>
+Salary: {{salary | currency:'EUR'}}
+
