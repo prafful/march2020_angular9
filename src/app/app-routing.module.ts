@@ -18,6 +18,9 @@ import { StructurengswitchcaseComponent } from './directive/structurengswitchcas
 import { AllpipesComponent } from './pipes/allpipes/allpipes.component';
 import { InbuiltpipesComponent } from "./pipes/inbuiltpipes/inbuiltpipes.component";
 import { CustompipesComponent } from './pipes/custompipes/custompipes.component';
+import { AllformsComponent } from './forms/allforms/allforms.component';
+import { TemplateComponent } from './forms/template/template.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
 
 
 const routes: Routes = [
@@ -102,6 +105,20 @@ const routes: Routes = [
                     {
                       path:'custompipe',
                       component:CustompipesComponent
+                    }
+                  ]
+                },
+                {
+                  path:'allforms',
+                  component:AllformsComponent,
+                  children:[
+                    {
+                      path:'template',
+                      component:TemplateComponent
+                    },
+                    {
+                      path:'reactive',
+                      component:ReactiveComponent
                     }
                   ]
                 },

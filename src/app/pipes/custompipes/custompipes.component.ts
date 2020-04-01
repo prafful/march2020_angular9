@@ -9,6 +9,10 @@ export class CustompipesComponent implements OnInit {
 
   scores: number[] =[20, 1, 45, 3, 15, 12, 17, 100, 88]
 
+  friends: string[] = ['obb','unlrn','cas','owioh','mlann']
+
+  message = "check"
+  
   constructor() { }
 
   ngOnInit(): void {

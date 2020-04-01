@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +28,10 @@ import { AllpipesComponent } from './pipes/allpipes/allpipes.component';
 import { InbuiltpipesComponent } from './pipes/inbuiltpipes/inbuiltpipes.component';
 import { CustompipesComponent } from './pipes/custompipes/custompipes.component';
 import { SortnumberspipePipe } from './custompipe/sortnumberspipe.pipe';
+import { SortstringPipe } from './custompipe/sortstring.pipe';
+import { AllformsComponent } from './forms/allforms/allforms.component';
+import { TemplateComponent } from './forms/template/template.component';
+import { ReactiveComponent } from './forms/reactive/reactive.component';
 
 
 @NgModule({
@@ -55,11 +60,16 @@ import { SortnumberspipePipe } from './custompipe/sortnumberspipe.pipe';
     AllpipesComponent,
     InbuiltpipesComponent,
     CustompipesComponent,
-    SortnumberspipePipe   
+    SortnumberspipePipe,
+    SortstringPipe,
+    AllformsComponent,
+    TemplateComponent,
+    ReactiveComponent   
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
