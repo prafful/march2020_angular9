@@ -15,7 +15,7 @@ myhobby Valid Status: {{ myform.myhobby.valid }}
 <form #myform="ngForm" (ngSubmit)="getFormData(myform)">
     <label>First Name: </label>
     <input type="text" [(ngModel)]="fname" name="firstname" required> {{fname}}
-    <span>Input name is required!</span>
+    <span >Input name is required!</span>
     <br>
     <label>Last Name: </label>
     <input type="text" [(ngModel)]="lname" name="lastname" required> {{lname}}

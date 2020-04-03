@@ -1,1 +1,33 @@
-<p>reactive works!</p>
+<div>
+    Reactive Form:
+</div>
+<br>
+Form Valid Status: 
+<!--
+<br>
+firstname Valid Status: {{ myform.firstname.valid }}
+<br>
+lastname Valid Status: {{ myform.lastname.valid }}
+br
+myhobby Valid Status: {{ myform.myhobby.valid }}
+<br> -->
+
+<form [formGroup]="myReactiveForm" (ngSubmit)="getFormData(myReactiveForm)">
+    <label>First Name: </label>
+    <input type="text"  formControlName="firstName"> 
+    <span >Input name is required!</span>
+    <br>
+    <label>Last Name: </label>
+    <input type="text" formControlName="lastName" >
+    <br>
+    <label >Hobby:</label>
+    <select formControlName="myHobby">
+        <option value="swimming">Swimming</option>
+        <option value="driving">Driving</option>
+        <option value="hacking">Hacking</option>
+        <option value="sleeping">Sleeping</option>
+    </select>
+ 
+    <br>
+    <button type="submit" [disabled]="myReactiveForm.invalid">Add</button>
+</form>
