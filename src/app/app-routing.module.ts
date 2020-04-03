@@ -21,6 +21,9 @@ import { CustompipesComponent } from './pipes/custompipes/custompipes.component'
 import { AllformsComponent } from './forms/allforms/allforms.component';
 import { TemplateComponent } from './forms/template/template.component';
 import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { ConsumeallComponent } from './consumeservices/consumeall/consumeall.component';
+import { Consumelocal1Component } from './consumeservices/consumelocal1/consumelocal1.component';
+import { Consumelocal2Component } from './consumeservices/consumelocal2/consumelocal2.component';
 
 
 const routes: Routes = [
@@ -119,6 +122,20 @@ const routes: Routes = [
                     {
                       path:'reactive',
                       component:ReactiveComponent
+                    }
+                  ]
+                },
+                {
+                  path:'consumeallservices',
+                  component:ConsumeallComponent,
+                  children:[
+                    {
+                      path:'localservice1',
+                      component:Consumelocal1Component
+                    },
+                    {
+                      path:'localservice2',
+                      component:Consumelocal2Component
                     }
                   ]
                 },

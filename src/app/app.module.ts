@@ -33,6 +33,9 @@ import { SortstringPipe } from './custompipe/sortstring.pipe';
 import { AllformsComponent } from './forms/allforms/allforms.component';
 import { TemplateComponent } from './forms/template/template.component';
 import { ReactiveComponent } from './forms/reactive/reactive.component';
+import { ConsumeallComponent } from './consumeservices/consumeall/consumeall.component';
+import { Consumelocal1Component } from './consumeservices/consumelocal1/consumelocal1.component';
+import { Consumelocal2Component } from './consumeservices/consumelocal2/consumelocal2.component';
 
 
 @NgModule({
@@ -65,7 +68,10 @@ import { ReactiveComponent } from './forms/reactive/reactive.component';
     SortstringPipe,
     AllformsComponent,
     TemplateComponent,
-    ReactiveComponent   
+    ReactiveComponent,
+    ConsumeallComponent,
+    Consumelocal1Component,
+    Consumelocal2Component   
   ],
   imports: [
     BrowserModule,
