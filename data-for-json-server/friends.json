@@ -1,0 +1,63 @@
+{
+  "allfriends": [
+    {
+      "id": 1,
+      "name": "Prafful Daga",
+      "location": "Chennai"
+    },
+    {
+      "id": 2,
+      "name": "Adi P",
+      "location": "Chennai"
+    },
+    {
+      "name": "MLANN",
+      "location": "Bengaluru",
+      "id": 4
+    },
+    {
+      "name": "OBB",
+      "location": "Tokyo",
+      "id": 5
+    }
+  ],
+  "allfriendsdetail": [
+    {
+      "id": 1,
+      "likes": 10,
+      "dislikes": 2,
+      "profile_picture": "1.png",
+      "friend_id": "1",
+      "other_friends": {
+        "ids": [
+          2
+        ]
+      }
+    },
+    {
+      "id": 2,
+      "likes": 22,
+      "dislikes": 2,
+      "profile_picture": "2.png",
+      "friend_id": "2",
+      "other_friends": {
+        "ids": [
+          1,
+          5
+        ]
+      }
+    },
+    {
+      "id": 3,
+      "likes": 55,
+      "dislikes": 5,
+      "profile_picture": "3.png",
+      "friend_id": "5",
+      "other_friends": {
+        "ids": [
+          1
+        ]
+      }
+    }
+  ]
+}
