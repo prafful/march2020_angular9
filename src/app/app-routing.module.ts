@@ -24,6 +24,7 @@ import { ReactiveComponent } from './forms/reactive/reactive.component';
 import { ConsumeallComponent } from './consumeservices/consumeall/consumeall.component';
 import { Consumelocal1Component } from './consumeservices/consumelocal1/consumelocal1.component';
 import { Consumelocal2Component } from './consumeservices/consumelocal2/consumelocal2.component';
+import { RemoteComponent } from './remote/remote/remote.component';
 
 
 const routes: Routes = [
@@ -138,6 +139,10 @@ const routes: Routes = [
                       component:Consumelocal2Component
                     }
                   ]
+                },
+                {
+                  path:'remote',
+                  component: RemoteComponent
                 },
                 {
                   path:'**',

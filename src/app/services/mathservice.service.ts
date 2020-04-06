@@ -7,7 +7,7 @@ export class MathserviceService {
 
   localPI:number = 3.14
 
-  scores: number[] = [21, 31, 41]
+  scores: number[] = [21, 31, 41 , 51]
 
   message(){
     return "Hello From Math Service!!!!"

@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
+import { HttpClientModule } from "@angular/common/http";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { ReactiveComponent } from './forms/reactive/reactive.component';
 import { ConsumeallComponent } from './consumeservices/consumeall/consumeall.component';
 import { Consumelocal1Component } from './consumeservices/consumelocal1/consumelocal1.component';
 import { Consumelocal2Component } from './consumeservices/consumelocal2/consumelocal2.component';
+import { RemoteComponent } from './remote/remote/remote.component';
 
 
 @NgModule({
@@ -71,13 +73,15 @@ import { Consumelocal2Component } from './consumeservices/consumelocal2/consumel
     ReactiveComponent,
     ConsumeallComponent,
     Consumelocal1Component,
-    Consumelocal2Component   
+    Consumelocal2Component,
+    RemoteComponent   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
