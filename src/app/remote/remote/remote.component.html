@@ -1,7 +1,48 @@
+<p>Friends:</p>
+<button (click)="showFriendForm()">Add In Same Page</button>
+&nbsp;
+<button>Add In New Page</button>
+<br><br>
+<div *ngIf="displayFriendForm">
+    <form #friendForm="ngForm" (ngSubmit)="addFriendViaRestApi(friendForm)">
+        <label>Name:</label>
+        <input type="text" name="name" [(ngModel)]="myfullname" required>
+        <br>
+        <label>Location:</label>
+        <input type="text" name="location" [(ngModel)]="mylocation" required>
+        <br>
+        <button type="submit" [disabled]="!friendForm.valid">Add Friend</button>
+    </form>
+</div>
+<br><br>
+<table border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Location</th>
+            <th colspan="2">Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let friend of friends">
+            <td>{{ friend.id }}</td>
+            <td> {{ friend.name }} </td>
+            <td> {{ friend.location }}</td>
+            <td>
+                <button>Edit</button>
+            </td>
+            <td>
+                <button>Delete</button>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<hr>
 <p>Users:</p>
-
 <ol>
     <li *ngFor="let u of users">
         {{u.name}} from {{u.address.city}}
     </li>
 </ol>
+<hr>

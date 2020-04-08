@@ -12,4 +12,12 @@ export class RemoteDataService {
     return this.http.get("https://jsonplaceholder.typicode.com/users")
   }
 
+  getFriends(){
+    return this.http.get("http://localhost:3000/allfriends")
+  }
+
+  addFriend(friend){
+    return this.http.post("http://localhost:3000/allfriends", friend)
+  }
+
 }

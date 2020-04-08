@@ -9,9 +9,17 @@ import { RemoteDataService } from 'src/app/services/remote-data.service';
 })
 export class RemoteComponent implements OnInit {
 
-  users :any = []
+  users: any = []
+  mylocation: string = ''
+  myfullname: string = ''
+  friends: any = null
+  displayFriendForm:boolean = false
 
   constructor(private remoteData: RemoteDataService) { }
+
+  showFriendForm = ()=>{
+    this.displayFriendForm = this.displayFriendForm==true ? false:true
+  }
 
   //no-name/ghost function
   /*
@@ -29,34 +37,61 @@ export class RemoteComponent implements OnInit {
   */
 
 
-//named function
-/*
-ngOnInit(): void {
-  //no-name/ghost function
-  this.http.get("https://jsonplaceholder.typicode.com/users")
-            .subscribe(this.displayData, this.displayError)
-} 
+  //named function
+  /*
+  ngOnInit(): void {
+    //no-name/ghost function
+    this.http.get("https://jsonplaceholder.typicode.com/users")
+              .subscribe(this.displayData, this.displayError)
+  } 
+  
+  displayData = function(response){
+    console.log(response);
+    this.users = response
+    console.log(this.users);
+  }
+  
+  displayError = function(error){
+    console.log(error);
+  } 
+  */
+  //arrow function -> recommended
+  ngOnInit(): void {
 
-displayData = function(response){
-  console.log(response);
-  this.users = response
-  console.log(this.users);
-}
+    this.remoteData.getUsers().subscribe((response) => {
+      console.log(response);
+      this.users = response
+      console.log(this.users);
+    }, (error) => {
+      console.log(error);
+    })
 
-displayError = function(error){
-  console.log(error);
-} 
-*/
-//arrow function -> recommended
-ngOnInit():void{
-  this.remoteData.getUsers().subscribe((response)=>{
-                                        console.log(response);
-                                        this.users = response
-                                        console.log(this.users);
-                                      }, (error)=>{
-                                        console.log(error);
-                                      })
-}
+    this.getFriendsNow()
+  }
 
- 
+  getFriendsNow = () => {
+    
+
+    this.remoteData.getFriends().subscribe(res => {
+      console.log(res)
+      this.friends = res
+    }, err => {
+      console.log(err)
+    })
+  }
+
+  addFriendViaRestApi = (ff) => {
+    console.log(ff.value);
+    this.remoteData.addFriend(ff.value).subscribe(res => {
+      console.log(res);
+      this.myfullname = ''
+      this.mylocation = ''
+      this.displayFriendForm = false
+      this.getFriendsNow()
+    }, err => {
+      console.log(err);
+    })
+    //do not call getFriends here!
+  }
+
 }
