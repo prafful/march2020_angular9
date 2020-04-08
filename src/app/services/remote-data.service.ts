@@ -20,4 +20,8 @@ export class RemoteDataService {
     return this.http.post("http://localhost:3000/allfriends", friend)
   }
 
+  deleteFriendById(id){
+    return this.http.delete("http://localhost:3000/allfriends/" + id)
+  }
+
 }

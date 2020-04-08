@@ -94,4 +94,13 @@ export class RemoteComponent implements OnInit {
     //do not call getFriends here!
   }
 
+  deleteCurrentFriend = (id)=>{
+    this.remoteData.deleteFriendById(id).subscribe(res=>{
+      console.log(res);
+      this.getFriendsNow()
+    }, err=>{
+      console.log(err);
+    })
+  }
+
 }
