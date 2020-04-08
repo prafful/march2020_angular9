@@ -14,6 +14,13 @@ export class RemoteComponent implements OnInit {
   myfullname: string = ''
   friends: any = null
   displayFriendForm:boolean = false
+  displayEditForm:boolean = false
+  myid:number = 0;
+  editFriend:any ={
+    id:null,
+    name:null,
+    location:null
+  }
 
   constructor(private remoteData: RemoteDataService) { }
 
@@ -96,6 +103,31 @@ export class RemoteComponent implements OnInit {
 
   deleteCurrentFriend = (id)=>{
     this.remoteData.deleteFriendById(id).subscribe(res=>{
+      console.log(res);
+      this.getFriendsNow()
+    }, err=>{
+      console.log(err);
+    })
+  }
+
+  showEditForm =(id)=>{
+    this.displayEditForm = true
+    this.remoteData.getFriendById(id).subscribe(res=>{
+      console.log(res);
+      this.editFriend = res
+      console.log(this.editFriend);
+      this.myid = this.editFriend.id
+      this.myfullname = this.editFriend.name
+      this.mylocation = this.editFriend.location
+    }, err=>{
+
+    })
+
+  }
+
+  editFriendViaRestApi = (ff)=>{
+    console.log(ff.value);
+    this.remoteData.editFriend(ff.value).subscribe(res =>{
       console.log(res);
       this.getFriendsNow()
     }, err=>{

@@ -24,4 +24,16 @@ export class RemoteDataService {
     return this.http.delete("http://localhost:3000/allfriends/" + id)
   }
 
+  getFriendById(id){
+    return this.http.get("http://localhost:3000/allfriends/" + id)
+  }
+
+  editFriend(friend){
+    console.log(friend.id);
+    var body = {
+      name:friend.name,
+      location:friend.location
+    }
+    return this.http.put("http://localhost:3000/allfriends/" + friend.id, body)
+  }
 }

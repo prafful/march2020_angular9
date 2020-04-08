@@ -14,6 +14,19 @@
         <button type="submit" [disabled]="!friendForm.valid">Add Friend</button>
     </form>
 </div>
+<div *ngIf="displayEditForm">
+    <form #friendForm="ngForm" (ngSubmit)="editFriendViaRestApi(friendForm)">
+        <label>Id:</label>
+        <input type="text" name="id" [(ngModel)]="myid" readonly>
+        <label>Name:</label>
+        <input type="text" name="name" [(ngModel)]="myfullname" required> {{myfullname}}
+        <br>
+        <label>Location:</label>
+        <input type="text" name="location" [(ngModel)]="mylocation" required> {{mylocation}}
+        <br>
+        <button type="submit" [disabled]="!friendForm.valid">Edit Friend</button>
+    </form>
+</div>
 <br><br>
 <table border="1">
     <thead>
@@ -30,7 +43,7 @@
             <td> {{ friend.name }} </td>
             <td> {{ friend.location }}</td>
             <td>
-                <button>Edit</button>
+                <button (click)="showEditForm(friend.id)">Edit</button>
             </td>
             <td>
                 <button (click)="deleteCurrentFriend(friend.id)">Delete</button>
