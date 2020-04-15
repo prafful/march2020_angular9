@@ -1,7 +1,7 @@
 <p>Friends:</p>
 <button (click)="showFriendForm()">Add In Same Page</button>
 &nbsp;
-<button>Add In New Page</button>
+<button (click)="showFriendFormInNewPage()">Add In New Page</button>
 <br><br>
 <div *ngIf="displayFriendForm">
     <form #friendForm="ngForm" (ngSubmit)="addFriendViaRestApi(friendForm)">

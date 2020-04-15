@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -38,6 +39,8 @@ import { ConsumeallComponent } from './consumeservices/consumeall/consumeall.com
 import { Consumelocal1Component } from './consumeservices/consumelocal1/consumelocal1.component';
 import { Consumelocal2Component } from './consumeservices/consumelocal2/consumelocal2.component';
 import { RemoteComponent } from './remote/remote/remote.component';
+import { NewfriendComponent } from './remote/newfriend/newfriend.component';
+import { TextAnimateComponent } from './animation/text-animate/text-animate.component';
 
 
 @NgModule({
@@ -74,14 +77,17 @@ import { RemoteComponent } from './remote/remote/remote.component';
     ConsumeallComponent,
     Consumelocal1Component,
     Consumelocal2Component,
-    RemoteComponent   
+    RemoteComponent,
+    NewfriendComponent,
+    TextAnimateComponent   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule, 
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -6,16 +6,6 @@
       "location": "Chennai"
     },
     {
-      "id": 2,
-      "name": "Adi P",
-      "location": "Chennai"
-    },
-    {
-      "name": "MLANN",
-      "location": "Bengaluru",
-      "id": 4
-    },
-    {
       "name": "OBB",
       "location": "Tokyo",
       "id": 5
@@ -36,14 +26,39 @@
       "id": 8
     },
     {
-      "name": "Gulab Jamun",
-      "location": "Jodhpur",
-      "id": 9
-    },
-    {
       "name": "Dashing",
       "location": "Amazon",
       "id": 14
+    },
+    {
+      "name": "Grocery",
+      "location": "TBM",
+      "id": 15
+    },
+    {
+      "name": "Pikachu",
+      "location": "Pokemon Land",
+      "id": 16
+    },
+    {
+      "name": "Newegg",
+      "location": "New Zealand",
+      "id": 17
+    },
+    {
+      "name": "Tuma",
+      "location": "Kuramae",
+      "id": 18
+    },
+    {
+      "name": "Ola",
+      "location": "Uberland",
+      "id": 19
+    },
+    {
+      "name": "Miko San",
+      "location": "Japan",
+      "id": 20
     }
   ],
   "allfriendsdetail": [

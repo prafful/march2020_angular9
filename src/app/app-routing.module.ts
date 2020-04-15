@@ -25,6 +25,8 @@ import { ConsumeallComponent } from './consumeservices/consumeall/consumeall.com
 import { Consumelocal1Component } from './consumeservices/consumelocal1/consumelocal1.component';
 import { Consumelocal2Component } from './consumeservices/consumelocal2/consumelocal2.component';
 import { RemoteComponent } from './remote/remote/remote.component';
+import { NewfriendComponent } from './remote/newfriend/newfriend.component';
+import { TextAnimateComponent } from './animation/text-animate/text-animate.component';
 
 
 const routes: Routes = [
@@ -143,6 +145,14 @@ const routes: Routes = [
                 {
                   path:'remote',
                   component: RemoteComponent
+                },
+                {
+                  path:'newfriend',
+                  component:NewfriendComponent
+                },
+                {
+                  path:'animate',
+                  component: TextAnimateComponent
                 },
                 {
                   path:'**',

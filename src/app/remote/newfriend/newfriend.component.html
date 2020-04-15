@@ -1,0 +1,13 @@
+<p>newfriend works!</p>
+
+<div >
+    <form #friendForm="ngForm" (ngSubmit)="addFriendViaRestApi(friendForm)">
+        <label>Name:</label>
+        <input type="text" name="name" [(ngModel)]="myfullname" required>
+        <br>
+        <label>Location:</label>
+        <input type="text" name="location" [(ngModel)]="mylocation" required>
+        <br>
+        <button type="submit" [disabled]="!friendForm.valid">Add Friend</button>
+    </form>
+</div>

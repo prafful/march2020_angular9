@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { RemoteDataService } from 'src/app/services/remote-data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-remote',
@@ -22,7 +23,7 @@ export class RemoteComponent implements OnInit {
     location:null
   }
 
-  constructor(private remoteData: RemoteDataService) { }
+  constructor(private remoteData: RemoteDataService, private router:Router) { }
 
   showFriendForm = ()=>{
     this.displayFriendForm = this.displayFriendForm==true ? false:true
@@ -130,9 +131,17 @@ export class RemoteComponent implements OnInit {
     this.remoteData.editFriend(ff.value).subscribe(res =>{
       console.log(res);
       this.getFriendsNow()
+      this.displayEditForm = false
+      this.editFriend = null
+      this.myfullname =''
+      this.mylocation = ''
     }, err=>{
       console.log(err);
     })
+  }
+
+  showFriendFormInNewPage=()=>{
+    this.router.navigate(["/newfriend"])
   }
 
 }
